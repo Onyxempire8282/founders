@@ -227,28 +227,6 @@
     transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.btn-copper {
-    background: var(--copper);
-    color: #1a1e22;
-    border: 1px solid rgba(184, 115, 51, 0.6);
-}
-
-.btn-copper:hover {
-    background: #a8672f;
-    transform: translateY(-1px);
-}
-
-.btn-outline {
-    background: transparent;
-    color: var(--copper);
-    border: 1px solid rgba(184, 115, 51, 0.6);
-}
-
-.btn-outline:hover {
-    background: rgba(184, 115, 51, 0.15);
-    transform: translateY(-1px);
-}
-
 /* Form controls */
 input,
 select,
