@@ -75,13 +75,13 @@ body {
 
 .nav-links a {
     position: relative;
-    color: #c5cbd1;
+    color: #d8dee5;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .nav-links a::after {
@@ -91,12 +91,12 @@ body {
     bottom: -6px;
     width: 0%;
     height: 2px;
-    background: var(--copper);
-    transition: width 0.3s ease;
+    background: #c47a2c;
+    transition: width 0.25s ease;
 }
 
 .nav-links a:hover {
-    color: #ffffff;
+    color: #c47a2c;
 }
 
 .nav-links a:hover::after {
@@ -217,6 +217,17 @@ body {
         0 18px 28px rgba(0,0,0,0.55);
 }
 
+.elevation-3 {
+    box-shadow:
+        inset 0 2px 0 rgba(255,255,255,0.08),
+        inset 0 -2px 0 rgba(0,0,0,0.4),
+        0 2px 0 #1a1e22,
+        0 4px 0 #15191d,
+        0 6px 0 #101417,
+        0 10px 20px rgba(0,0,0,0.5),
+        0 20px 40px rgba(0,0,0,0.3);
+}
+
 .rivet {
     width: 6px;
     height: 6px;
@@ -228,10 +239,38 @@ body {
         0 1px 2px rgba(0,0,0,0.8);
 }
 
-.rivet.tl { top: 10px; left: 10px; }
-.rivet.tr { top: 10px; right: 10px; }
-.rivet.bl { bottom: 10px; left: 10px; }
-.rivet.br { bottom: 10px; right: 10px; }
+.hero-section.cipher-plate {
+    position: relative;
+    box-shadow:
+        inset 0 2px 0 rgba(255,255,255,0.08),
+        inset 0 -3px 0 rgba(0,0,0,0.5),
+        0 3px 0 #1a1e22,
+        0 6px 0 #15191d,
+        0 9px 0 #101417,
+        0 16px 24px rgba(0,0,0,0.6),
+        0 30px 60px rgba(0,0,0,0.45);
+}
+
+.hero-section.cipher-plate::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 12px;
+    right: 12px;
+    height: 6px;
+    background: #0f1316;
+    border-radius: 0 0 8px 8px;
+    z-index: -1;
+}
+
+.rivet.tl { top: 8px; left: 8px; }
+.rivet.tr { top: 8px; right: 8px; }
+.rivet.bl { bottom: 8px; left: 8px; }
+.rivet.br { bottom: 8px; right: 8px; }
+
+.hero-section {
+    box-shadow: none;
+}
 
 .feature-icon {
     width: 80px;
@@ -267,23 +306,54 @@ body {
     margin-top: 50px;
 }
 
-.streamline-card {
-    cursor: default;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.streamline-card:hover {
-    transform: translateY(-4px);
-}
-
+.streamline-card,
 .pricing-card {
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 1px solid #2f343a;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
 }
 
+.streamline-card:hover,
 .pricing-card:hover {
     transform: translateY(-6px);
     border-color: #c47a2c;
+    box-shadow:
+        0 2px 0 #1a1e22,
+        0 6px 0 #14181c,
+        0 10px 0 #0f1316,
+        0 18px 30px rgba(0,0,0,0.6);
+}
+
+.pricing-card--primary {
+    border: 2px solid #c47a2c;
+    box-shadow:
+        inset 0 2px 0 rgba(255,255,255,0.08),
+        inset 0 -3px 0 rgba(0,0,0,0.5),
+        0 4px 0 #1a1e22,
+        0 8px 0 #14181c,
+        0 12px 0 #0f1316,
+        0 28px 50px rgba(0,0,0,0.65);
+}
+
+.pricing-card--primary:hover {
+    transform: translateY(-8px);
+    border-color: #c47a2c;
+}
+
+.steel-badge {
+    position: absolute;
+    top: -14px;
+    right: 24px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    background: linear-gradient(145deg, #3a4048, #2b3036);
+    border: 1px solid #c47a2c;
+    border-radius: 4px;
+    color: #e6e6e6;
+    text-transform: uppercase;
 }
 
 .plan-name {
