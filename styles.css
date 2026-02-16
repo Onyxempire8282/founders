@@ -437,10 +437,23 @@ body {
 }
 
 .founder-letter {
-    max-width: 980px;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #d6dde3;
+    max-width: 820px;
     margin: 0 auto;
     padding: var(--cipher-space-xl);
     border-radius: 12px;
+}
+
+.founder-letter p {
+    margin-bottom: 1.2rem;
+}
+
+.founder-letter strong {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .founder-letter .rivet {
